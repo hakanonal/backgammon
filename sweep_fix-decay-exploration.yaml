@@ -1,0 +1,17 @@
+program: train.py
+name: tavla2-fix-decay-exploration-sweep
+method: bayes
+metric:
+  name: valid-avarage
+  goal: maximize
+parameters:
+  episode:
+    value: 100000
+  discount:
+    value: 0.4
+  decay_factor:
+    value: 1
+  exploration_rate:
+    distribution: uniform
+    min: 0
+    max: 0.4
