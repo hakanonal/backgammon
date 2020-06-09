@@ -6,6 +6,7 @@ This repository's goal is to teach an agent to play backgammon game. This projec
 The project's scope is to: 
 - create the game environment and also the agent in python.
 - Optimize hyperparameters to find best agent.
+- Create a simple interactive game environment that real peaple can play with the best trained agent.
 
 ## Methodology
 
