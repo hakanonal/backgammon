@@ -1,10 +1,10 @@
 import argparse
-from game import game
+from game import environment
 
 
 
 def _main_(args):
-    board = game()
+    board = environment()
     board.start()
 
 

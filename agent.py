@@ -17,15 +17,15 @@ class agent:
         self.decay_factor = decay_factor
 
         wandb.config.update({'model_name':'Dense,208-104-52 with relu, adam, mean_squared_error'})
-        #if(path.exists(self._getModelFilename())):
-        #    self.model = load_model(self._getModelFilename())
-        #else:
-        self.model = Sequential()
-        self.model.add(Dense(208,activation="relu", input_shape=(28,)))
-        self.model.add(Dense(104,activation="relu"))
-        self.model.add(Dense(52))
-        self.model.add(Reshape((2,26)))
-        self.model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
+        if(path.exists(self._getModelFilename())):
+            self.model = load_model(self._getModelFilename())
+        else:
+            self.model = Sequential()
+            self.model.add(Dense(208,activation="relu", input_shape=(28,)))
+            self.model.add(Dense(104,activation="relu"))
+            self.model.add(Dense(52))
+            self.model.add(Reshape((2,26)))
+            self.model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
 
 
     def _getModelFilename(self):

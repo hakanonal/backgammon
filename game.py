@@ -108,3 +108,4 @@ class environment:
 
         self.white_agent.saveModel()
         self.black_agent.saveModel()
+        
